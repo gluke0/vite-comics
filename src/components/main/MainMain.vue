@@ -3,7 +3,7 @@ import MainTop from './MainTop.vue';
 import MainBottom from './MainBottom.vue';
 
 export default {
-    name: 'Main',
+    name: 'MainMain',
     components: {
         MainTop,
         MainBottom,
@@ -13,7 +13,7 @@ export default {
 
 <template>
     <main>
-        <MainTop></MainTop>
-        <MainBottom></MainBottom>
+        <MainTop> </MainTop>
+        <MainBottom> </MainBottom>
     </main>
 </template>

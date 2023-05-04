@@ -1,6 +1,7 @@
 <script>
 export default {
-    data() {
+    name: 'MainBottom',
+        data () {
         return {
             buttons: [
                 {
@@ -25,6 +26,11 @@ export default {
                 }
             ]
         }
+    },
+    methods: {
+        getImagePath: function (imgPath){
+            return new URL(imgPath, import.meta.url).href;
+        }
     }
 }
 </script>
@@ -33,36 +39,52 @@ export default {
     <div id="main-bottom">
         <div class="container">
             <div v-for="button in buttons" class="button">
-                <div class="image"></div>
-                <div class="text"> {{ button.text }}</div>
+                <div class="image">
+                    <img :src="getImagePath(`../../../public/img/${button.image}`)" :alt="button.text">
+                </div>
+                <div class="text"><a href="#">{{ button.text }}</a></div>
             </div>
         </div>
     </div>
 </template>
 
-<style scoped>
-#main-bottom {
-    background-color: rgb(2, 130, 249);
-}
-.container {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    height: 155px;
+<style lang="scss" scoped>
+@use '../../../public/style/partials/variables';
+
+#main-bottom{
+    background-color: variables.$brand-color;
+
+    .container{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 3rem 0;
+    
+        .button{
+            align-items: center;
+            display: flex;
+            margin: 0 0.8rem;
+
+            .image{
+                margin-right: 0.6rem;
+                width: variables.$shop-icons;
+
+                img{
+                    max-height: variables.$shop-icons;
+                    object-fit: contain;
+                }
+            }
+
+            .text{
+                text-transform: uppercase;
+
+                a{
+                    color: variables.$main-color;
+                }
+            }
+        }
+    }
 }
 
-.button{
-    align-items: center;
-    color: white;
-    display: flex;
-    margin: 0 0.8rem;
-    text-transform: uppercase;
-}
 
-.image{
-    aspect-ratio: 1;
-    background-color: white;
-    margin-right: 0.6rem;
-    width: 50px;
-}
 </style>

@@ -1,9 +1,6 @@
 <script>
 export default {
-    data() {
-        return {
-        }
-    }
+    name: 'MainTop'
 }
 </script>
 
@@ -15,14 +12,18 @@ export default {
     </div>
 </template>
 
-<style scoped>
-#main-top {
-    background-color: rgb(28, 28, 28);
-}
-.container {
-    align-items: center;
-    color: white;
-    display: flex;
-    height: 130px;
-}
+<style lang="scss" scoped>
+@use '../../../public/style/partials/variables';
+
+    #main-top{
+        background-color: variables.$darken-color;
+
+        .container {
+            align-items: center;
+            color: variables.$main-color;
+            display: flex;
+            font-size: 2rem;
+            padding: 4rem 0;
+        }
+    }   
 </style>
