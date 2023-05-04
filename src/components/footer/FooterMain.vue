@@ -7,14 +7,13 @@ export default {
     components: {
         FooterTop,
         FooterBottom,
-        
     }
 }
 </script>
 
 <template>
     <footer>
-        <FooterTop></FooterTop>
-        <FooterBottom></FooterBottom>
+        <FooterTop> </FooterTop>
+        <FooterBottom> </FooterBottom>
     </footer>
 </template>

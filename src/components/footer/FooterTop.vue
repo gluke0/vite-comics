@@ -1,6 +1,7 @@
 <script>
 
 export default {
+    name: 'FooterTop',
     data() {
         return {
             comics: [
@@ -74,23 +75,35 @@ export default {
     </div>
 </template>
 
-<style scoped>
-#footer-top {
-    background-color: rgb(28, 28, 28);
-}
-.container {
-    display: flex;
-}
-.column{
-    margin: 2rem 1.3rem 2rem 0;
-}
+<style lang="scss" scoped>
+@use '../../../public/style/partials/variables';
+#footer-top{
+    background: url(../../../public/img/dc-logo-bg.png) center right 20% no-repeat, url(../../../public/img/footer-bg.jpg) left top no-repeat;
+    background-size: auto, cover;
+    .container {
+        display: flex;
+        padding: 2rem 0;
+        .column{
+            margin: 2rem 1.3rem 2rem 0;
 
-ul{
-    margin: 0.8rem 0;
-    color: rgb(124, 126, 128);
-}
-h3{
-    color: white;
+        ul{
+            margin: 0.8rem 0;
+
+            li{
+                margin: 0.5rem 0;
+            
+                a{
+                    color: variables.$darken-text-color;
+                }
+            }
+        }
+        
+        h3{
+            color: variables.$main-color;
+            text-transform: uppercase;
+        }
+        }
+    }
 }
 
 </style>
