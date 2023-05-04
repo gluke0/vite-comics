@@ -3,7 +3,7 @@ import FooterTop from './FooterTop.vue';
 import FooterBottom from './FooterBottom.vue';
 
 export default {
-    name: 'Footer',
+    name: 'FooterMain',
     components: {
         FooterTop,
         FooterBottom,

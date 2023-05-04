@@ -13,8 +13,6 @@
         <li>testo</li>
         <li>testo</li>
         <li>testo</li>
-        <li>testo</li>
-        <li>testo</li>
     </ul>
 </template>
 

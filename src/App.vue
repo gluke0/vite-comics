@@ -1,16 +1,16 @@
 <script setup>
-import Header from './components/header/header.vue';
-import Main from './components/main/Main.vue';
-import Footer from './components/footer/Footer.vue';
+import HeaderMain from './components/header/HeaderMain.vue';
+import MainMain from './components/main/MainMain.vue';
+import FooterMain from './components/footer/FooterMain.vue';
 </script>
 
 <template>
 
-  <Header> </Header>
+  <HeaderMain> </HeaderMain>
 
-  <Main> </Main>
+  <MainMain> </MainMain>
 
-  <Footer> </Footer>
+  <FooterMain> </FooterMain>
 
 </template>
 

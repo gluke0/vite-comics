@@ -1,12 +1,14 @@
 <script>
-
+import LoginSignup from './LoginSignup.vue';
+import SoCial from './Social.vue';
 export default {
     data() {
         return {
         }
     },
     components: {
-       
+        LoginSignup,
+        SoCial,
     }
 }
 </script>
@@ -14,7 +16,8 @@ export default {
 <template>
     <div id="footer-bottom">
         <div class="container">
-            
+            <LoginSignup> </LoginSignup>
+            <SoCial> </SoCial>
         </div>
     </div>
 </template>
@@ -26,8 +29,7 @@ export default {
 .container {
     align-items: center;
     display: flex;
-    /* contenuto altezza */
-    height: 100px; 
+    height: 100px;
     justify-content: space-between;
 }
 </style>
