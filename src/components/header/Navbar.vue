@@ -74,7 +74,8 @@ ul {
             border-bottom: variables.$navbar-border solid transparent;
             display: inline-block;
             line-height: 8rem;
-            &.active{
+            &.active,
+            &:hover{
                 border-bottom: 0.5rem solid variables.$brand-color;
                 color: variables.$brand-color;
             }
