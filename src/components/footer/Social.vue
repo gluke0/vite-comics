@@ -1,12 +1,36 @@
 <script>
-import SocialButton from './SocialButton.vue';
 export default {
+    name: 'SoCial',
     data() {
         return {
+            socials:[
+                {
+                    social: 'Facebook',
+                    logo: 'footer-facebook.png'
+                },
+                {
+                    social: 'Twitter',
+                    logo: 'footer-twitter.png'
+                },
+                {
+                    social: 'YouTube',
+                    logo: 'footer-YouTube.png'
+                },
+                {
+                    social: 'Pinterest',
+                    logo: 'footer-pinterest.png'
+                },
+                {
+                    social: 'Periscope',
+                    logo: 'footer-periscope.png'
+                },
+            ]
         }
     },
-    components: {
-        SocialButton
+    methods:{
+        getImagePath: function (imgPath){
+            return new URL(imgPath, import.meta.url).href;
+        }
     }
 }
 </script>
@@ -15,24 +39,40 @@ export default {
     <div id="socials">
         <h3> Follow us </h3>
         <div class="buttons">
-            <SocialButton></SocialButton>
-            <SocialButton></SocialButton>
-            <SocialButton></SocialButton>
-            <SocialButton></SocialButton>
-            <SocialButton></SocialButton>
+            <div v-for="social in socials" class="button">
+                <a href="#">
+                    <img :src="getImagePath(`../../../public/img/${social.logo}`)" :alt="social.social">
+                </a>
+            </div>
         </div>
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../../../public/style/partials/variables';
+
 #socials{
     align-items: center;
     display: flex;
+
+    h3{
+        margin-right: 1rem;
+        color: variables.$brand-color;
+        text-transform: uppercase;
+    }
+    .buttons{
+        display: flex;
+
+        .button{
+            margin-left: 1rem;
+            width: 2rem;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    
 }
-h3{
-    margin-right: 1.5rem;
-}
-.buttons{
-    display: flex;
-}
+
 </style>

@@ -2,10 +2,7 @@
 import LoginSignup from './LoginSignup.vue';
 import SoCial from './Social.vue';
 export default {
-    data() {
-        return {
-        }
-    },
+    name: 'FooterBottom',
     components: {
         LoginSignup,
         SoCial,
@@ -22,14 +19,16 @@ export default {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../../../public/style/partials/variables';
+
 #footer-bottom {
-    background-color: rgb(48, 48, 48);
-}
-.container {
-    align-items: center;
-    display: flex;
-    height: 100px;
-    justify-content: space-between;
+    background-color: variables.$dark-color;
+    .container{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 2.5rem;
+    }
 }
 </style>
