@@ -1,18 +1,22 @@
 <script>
 export default {
+    name: 'Navbar',
     data() {
         return {
             navbar: [
-                "characters",
-                "comics",
-                "movies",
-                "tv",
-                "games",
-                "collectibles",
-                "videos",
-                "fans",
-                "news",
-                "shop",
+                {
+                    menu: 'Characters',
+                    active: false,
+                }
+                'Comics',
+                'Movies',
+                'TV',
+                'Games',
+                'Collectibles',
+                'Videos',
+                'Fans',
+                'News',
+                'Shop'
             ]
         }
     }
@@ -27,17 +31,24 @@ export default {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../../../public/style/partials/variables';
 
-ul{
+ul {
     display: flex;
-    list-style: none;
-    margin-right: 0.5rem;
-}
-
-li{
-    margin-left: 1.3rem;
     text-transform: uppercase;
+
+    li{
+        margin-left: 1.25rem;
+
+        a{
+            color: variables.$darken-color;
+            &.active {
+                border-bottom: 0.5rem solid variables.$brand-color;
+                color: variables.$brand-color;
+            }
+        }
+    }
 }
 
 </style>

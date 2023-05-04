@@ -86,7 +86,6 @@ export default {
 }
 
 ul{
-    list-style: none;
     margin: 0.8rem 0;
     color: rgb(124, 126, 128);
 }

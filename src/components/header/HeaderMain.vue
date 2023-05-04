@@ -15,24 +15,25 @@ export default {
 </script>
 
 <template>
-    <div id="header">
-
+    <header>
         <div class="container">
-            <Logo></Logo>
-            <Navbar></Navbar>
+
+            <Logo> </Logo>
+            <Navbar> </Navbar>
+
         </div>
-    </div>
+    </header>
 </template>
 
-<style scoped>
-#header {
-    background-color: white;
-    width: 100%;
-}
-.container {
-    align-items: center;
-    display: flex;
-    height: 120px;
-    justify-content: space-between;
+<style lang="scss" scoped>
+@use '../../../public/style/partials/variables';
+
+header{
+    background-color: variables.$main-color;
+    .container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        }
 }
 </style>

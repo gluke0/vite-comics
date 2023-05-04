@@ -1,10 +1,6 @@
 <script>
 export default {
-    data() {
-        return {
-            img: 'dc-logo.png'
-        }
-    }
+    name: 'Logo',
 }
 </script>
 
