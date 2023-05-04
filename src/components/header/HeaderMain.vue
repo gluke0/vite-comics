@@ -2,12 +2,14 @@
 
 import Logo from './Logo.vue';
 import Navbar from './Navbar.vue';
+import JumboTron from './JumboTron.vue';
 
 export default {
     name: "HeaderMain",
     components: {
         Logo,
-        Navbar
+        Navbar,
+        JumboTron,
     }
 }
 </script>
@@ -19,6 +21,9 @@ export default {
             <Logo> </Logo>
             <Navbar> </Navbar>
 
+        </div>
+        <div class="jumbotron">
+            <JumboTron></JumboTron>
         </div>
     </header>
 </template>
