@@ -90,14 +90,14 @@ export default {
 <template>
     <div id="main-top">
         <div class="container">
-            <h2>Current Series</h2>
+            <h2 class="loadmore" id="currents">Current Series</h2>
             <div class="comics">
                 <CardDc v-for="comic in comics"
                 class="comic"
                 :img="comic.thumb"
                 :title="comic.series"></CardDc>
             </div>
-            <button> Load More </button>
+            <button class="loadmore"> Load More </button>
         </div>
     </div>
 </template>
@@ -112,6 +112,8 @@ export default {
             color: variables.$main-color;
             font-size: 2rem;
             padding: 4rem 0;
+            display: flex;
+            flex-wrap: wrap;
 
             .comics{
                 display: flex;
@@ -125,4 +127,20 @@ export default {
             }
         }
     }   
+
+    .loadmore{
+                margin: 2.5rem auto 0;
+                color: variables.$main-color;
+                background-color: variables.$brand-color;
+                border: none;
+                text-transform: uppercase;
+                padding: 0.7rem 1.6rem;
+            }
+
+            #currents{
+                position: absolute;
+                font-size: 1.8rem;
+                margin: 0;
+            }
+
 </style>
