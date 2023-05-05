@@ -111,7 +111,7 @@ export default {
         .container {
             color: variables.$main-color;
             font-size: 2rem;
-            padding: 4rem 0;
+            padding: 1rem 0;
             display: flex;
             flex-wrap: wrap;
 
@@ -138,9 +138,11 @@ export default {
             }
 
             #currents{
-                position: absolute;
+                position: relative;
                 font-size: 1.8rem;
                 margin: 0;
+                display: inline-block;
+                top: -45px;
             }
 
 </style>
